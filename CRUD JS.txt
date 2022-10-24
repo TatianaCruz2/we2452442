@@ -1,0 +1,62 @@
+function actualizar(ID) {
+  //alert(ID)
+  var INDEX1 = vectorid.indexOf(ID);
+  //alert(INDEX1)
+  /*
+   Actualizar el elemento en el índice 4
+    var removeJune=months.splice(4, 1, 'May');
+    console.log(months);
+    console.log(removeJune);
+    */
+
+  for (i = 0; i <= INDEX1; i++) {
+
+    if (vectorid[i] == ID) {
+      
+      vectorname1.splice(INDEX1, 3, prompt("Ingrese un nombre nuevo"));
+      //alert(vectorname1)
+      var datoscliente = 'Los datos del cliente ' + i + " \n" + vectorid[i] + " \n" +
+        vectorname1[i] + " \n" + vectorname2[i] + " \n" + vectorapellido1[i] + " \n" + vectorapellido2[i] + " \n"
+      document.getElementById('pupdate').innerHTML = datoscliente
+    }
+    else {
+      document.getElementById('pupdate').innerHTML = ""
+    }
+  }
+}
+
+
+
+function delet(ID) {
+  //alert(ID)
+  var INDEX1 = vectorid.indexOf(ID);
+  //alert(INDEX1)
+  /*
+   Actualizar el elemento en el índice 4
+    var removeJune=months.splice(4, 1, 'May');
+    console.log(months);
+    console.log(removeJune);
+    */
+
+  for (i = 0; i <= INDEX1; i++) {
+
+    if (vectorid[i] == ID) {
+      alert( "Los datos del cliente " + vectorid[i]  +" han sido borrados ")
+      vectorid.splice(INDEX1, 1);
+      vectorname1.splice(INDEX1, 1);
+      vectorname2.splice(INDEX1, 1);
+      vectorapellido1.splice(INDEX1, 1);
+      vectorapellido2.splice(INDEX1, 1);
+      
+      //alert(vectorname1)
+
+      var datoscliente = 'Los datos del cliente ' + i + " \n" + vectorid[i] + " \n" +
+        vectorname1[i] + " \n" + vectorname2[i] + " \n" + vectorapellido1[i] + " \n" + vectorapellido2[i] + " \n"
+      //document.getElementById('pdelete').innerHTML = datoscliente
+      
+    }
+    else {
+      document.getElementById('pupdate').innerHTML = ""
+    }
+  }
+}
